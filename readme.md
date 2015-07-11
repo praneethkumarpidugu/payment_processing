@@ -38,6 +38,7 @@ pip install django==1.7.2
 ```shell
 python manage.py migrate
 python manage.py createsuperuser
+```
 
 #Run the API
 
@@ -45,4 +46,4 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Your production backend environment will be available in [127.0.0.1:8000/admin](127.0.0.1:8000/admin)
+Your production backend environment will be available in [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
