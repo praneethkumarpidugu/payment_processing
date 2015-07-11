@@ -40,8 +40,9 @@ python manage.py migrate
 python manage.py createsuperuser
 
 #Run the API
+
 ```shell
 python manage.py runserver
 ```
 
-Your production backend environment will be available in [127.0.0.1:8000/admin]
+Your production backend environment will be available in [127.0.0.1:8000/admin](127.0.0.1:8000/admin)
