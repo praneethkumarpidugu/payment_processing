@@ -1,11 +1,12 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from djang.conf import settings
+from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'profiles.views.home', name='home'),
+    url(r'^about/$', 'profiles.views.about', name='about'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^anotherurlpattern/', include(admin.site.urls)),
