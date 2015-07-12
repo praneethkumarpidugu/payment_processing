@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ssomelastname8@gmail.com'
+EMAIL_HOST_PASSWORD = 'qwertyuiop1234$'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -37,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'profiles',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -92,3 +99,5 @@ if DEBUG:
     MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
     STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
         )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
