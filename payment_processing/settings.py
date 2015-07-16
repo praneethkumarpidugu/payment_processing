@@ -13,8 +13,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ssomelastname8@gmail.com'
-EMAIL_HOST_PASSWORD = 'qwertyuiop1234$'
+EMAIL_HOST_USER = 'YOUR_USER_EMAIL'
+EMAIL_HOST_PASSWORD = 'YOUR_PASSWORD'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 
@@ -23,7 +23,7 @@ EMAIL_USE_TLS = True
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3id3cug^b3bk$m6=$um&01^#_3yi36_*ai8#dwu0gcz)j$x64d'
+SECRET_KEY = 'YOUR_SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'stripe',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,7 +115,8 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
 "django.contrib.messages.context_processors.messages",
 'django.core.context_processors.request',
 'allauth.account.context_processors.account',
-'allauth.socialaccount.context_processors.socialaccount',)
+'allauth.socialaccount.context_processors.socialaccount',
+'django.core.context_processors.csrf',)
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -151,3 +153,15 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_PASSWORD_MIN_LENGTH = 6
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+
+#stripe stuff
+
+#test keys
+
+STRIPE_PUBLISHABLE_KEY = 'YOUR_PUBLISHABLE_KEY_IN_STRIPE_SETTINGS'
+STRIPE_SECRET_KEY = 'YOUR_SECRET_KEY_IN_STRIPE_SETTINGS'
+
+#live keys
+
+# STRIPE_PUBLISHABLE_KEY = 'YOUR_PUBLISHABLE_LIVE_KEY'
+# STRIPE_SECRET_KEY = 'YOUR_LIVE_STRIPE_KEY'
